@@ -1,6 +1,15 @@
 function recursiveSearch(arr, target) {
   // type your code here
-}
+  for(let i = 0; i < arr.length; i++) {
+    if(arr[i] === target) {
+    return true
+    } else {
+      recursiveSearch(arr[i], target)
+    }
+  } 
+  return false
+  }
+
 
 if (require.main === module) {
   // add your own tests in here
@@ -15,5 +24,10 @@ if (require.main === module) {
 
 module.exports = recursiveSearch;
 
-// Please add your pseudocode to this file
+// Please add your pseudocode to this file 
+ // loop through targeted array
+ // set up contitional on if array element equals target
+ // if target found return true
+ // otherwise call function again passing next array element and target
+ // return false if loop completed and target not found
 // And a written explanation of your solution
